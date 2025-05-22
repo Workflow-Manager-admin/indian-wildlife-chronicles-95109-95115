@@ -1,0 +1,182 @@
+.wildlife-list-container {
+  margin-top: 20px;
+}
+
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.filter-btn {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #444;
+}
+
+.filter-btn.active {
+  background-color: var(--wildlife-green);
+  color: white;
+}
+
+.filter-btn:hover:not(.active) {
+  background-color: #e0e0e0;
+}
+
+.wildlife-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.wildlife-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.wildlife-card:hover {
+  transform: translateY(-5px);
+}
+
+.wildlife-image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.wildlife-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.wildlife-card:hover .wildlife-image img {
+  transform: scale(1.1);
+}
+
+.wildlife-card-content {
+  padding: 15px;
+}
+
+.wildlife-card-content h3 {
+  margin: 0 0 5px;
+  font-size: 1.2rem;
+}
+
+.scientific-name {
+  font-style: italic;
+  color: #666;
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+}
+
+.wildlife-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.category-tag {
+  background-color: #e0f0e0;
+  color: var(--wildlife-green);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-tag {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-tag[data-status="endangered"] {
+  background-color: #ffe0e0;
+  color: #d63031;
+}
+
+.status-tag[data-status="vulnerable"] {
+  background-color: #fff3e0;
+  color: #e17055;
+}
+
+.status-tag[data-status="near threatened"] {
+  background-color: #fff8e1;
+  color: #fdcb6e;
+}
+
+.status-tag[data-status="least concern"] {
+  background-color: #e0f5e9;
+  color: #00b894;
+}
+
+.wildlife-short-desc {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.wildlife-pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pagination-btn {
+  background: none;
+  border: 1px solid #ddd;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-btn.active {
+  background-color: var(--wildlife-green);
+  color: white;
+  border-color: var(--wildlife-green);
+}
+
+.pagination-btn:hover:not(.active) {
+  background-color: #f5f5f5;
+}
+
+.pagination-btn:last-child {
+  width: auto;
+  border-radius: 20px;
+  padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .wildlife-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-controls {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+}
