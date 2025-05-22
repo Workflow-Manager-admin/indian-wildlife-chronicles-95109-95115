@@ -1,0 +1,174 @@
+/* Main container styles for Indian Wildlife Chronicles */
+
+:root {
+  --wildlife-green: #2c5f2d;
+  --wildlife-light-green: #97bc62;
+  --wildlife-brown: #5e4425;
+  --wildlife-beige: #f5e1a4;
+  --wildlife-orange: #e87a41;
+  --wildlife-dark: #1a1a1a;
+  --wildlife-accent: #ffc107;
+}
+
+.wildlife-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wildlife-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://images.unsplash.com/photo-1551887373-3c5bd224f6e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+  color: white;
+  padding: 120px 0 60px;
+  text-align: center;
+}
+
+.wildlife-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: var(--wildlife-accent);
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.wildlife-intro {
+  background-color: var(--wildlife-green);
+  color: white;
+  padding: 60px 0;
+}
+
+.wildlife-intro h2 {
+  color: var(--wildlife-beige);
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.wildlife-intro p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--wildlife-orange);
+}
+
+.featured-section,
+.wildlife-list-section,
+.conservation-section {
+  padding: 60px 0;
+}
+
+.featured-section {
+  background-color: #f9f9f9;
+}
+
+.conservation-section {
+  background-color: #f2f7f2;
+}
+
+.wildlife-facts {
+  background-color: var(--wildlife-brown);
+  color: white;
+  padding: 60px 0;
+}
+
+.facts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.fact-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.fact-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--wildlife-accent);
+  margin-bottom: 10px;
+}
+
+.fact-text {
+  font-size: 1.2rem;
+}
+
+.wildlife-footer {
+  background-color: var(--wildlife-dark);
+  color: white;
+  padding: 40px 0;
+  margin-top: auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--wildlife-orange);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .wildlife-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .facts-container {
+    flex-direction: column;
+  }
+  
+  .fact-card {
+    min-width: 100%;
+  }
+}
