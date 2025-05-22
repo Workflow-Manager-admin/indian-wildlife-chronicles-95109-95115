@@ -1,0 +1,123 @@
+.featured-wildlife {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.featured-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.featured-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.featured-card:hover .featured-image img {
+  transform: scale(1.05);
+}
+
+.conservation-status {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.conservation-status[data-status="endangered"] {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.conservation-status[data-status="vulnerable"] {
+  background-color: #ffa64d;
+  color: white;
+}
+
+.conservation-status[data-status="near threatened"] {
+  background-color: #ffcc4d;
+  color: #333;
+}
+
+.conservation-status[data-status="least concern"] {
+  background-color: #4dbd74;
+  color: white;
+}
+
+.featured-content {
+  padding: 20px;
+}
+
+.featured-content h3 {
+  margin: 0 0 5px;
+  font-size: 1.5rem;
+  color: var(--wildlife-dark);
+}
+
+.scientific-name {
+  font-style: italic;
+  color: #666;
+  margin: 0 0 15px;
+}
+
+.featured-description {
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.animal-details {
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  margin-bottom: 10px;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--wildlife-brown);
+  margin-right: 5px;
+}
+
+.learn-more {
+  background-color: var(--wildlife-green);
+  color: white;
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.learn-more:hover {
+  background-color: #1e4620;
+}
+
+@media (max-width: 768px) {
+  .featured-wildlife {
+    grid-template-columns: 1fr;
+  }
+}
