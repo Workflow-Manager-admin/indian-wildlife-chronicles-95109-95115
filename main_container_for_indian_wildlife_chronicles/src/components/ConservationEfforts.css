@@ -1,0 +1,138 @@
+.conservation-efforts {
+  margin-top: 20px;
+}
+
+.conservation-intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.conservation-intro p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.conservation-programs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.program-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: row;
+}
+
+.program-icon {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f9f5;
+  padding: 20px;
+}
+
+.program-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.program-content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.program-content h3 {
+  margin: 0 0 5px;
+  font-size: 1.4rem;
+  color: var(--wildlife-dark);
+}
+
+.program-year {
+  color: #777;
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+}
+
+.program-description {
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.program-achievements {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.program-achievements h4 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: var(--wildlife-green);
+}
+
+.program-achievements ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.program-achievements li {
+  margin-bottom: 5px;
+  line-height: 1.4;
+  color: #444;
+}
+
+.conservation-cta {
+  margin-top: 50px;
+  text-align: center;
+  background-color: var(--wildlife-green);
+  padding: 40px;
+  border-radius: 8px;
+  color: white;
+}
+
+.conservation-cta h3 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+}
+
+.conservation-cta p {
+  margin: 0 0 25px;
+  font-size: 1.1rem;
+}
+
+.get-involved {
+  background-color: white;
+  color: var(--wildlife-green);
+  font-weight: 600;
+  padding: 12px 30px;
+}
+
+.get-involved:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .program-card {
+    flex-direction: column;
+  }
+  
+  .program-icon {
+    width: 100%;
+    height: 150px;
+  }
+  
+  .conservation-cta {
+    padding: 30px 20px;
+  }
+}
